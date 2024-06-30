@@ -1,72 +1,53 @@
 {
   "publisher": "leostar-tools",
-  "name": "leostar-tools",
-  "displayName": "leostar-tools",
-  "version": "0.1.0",
+  "name": "leostar-snippets",
+  "displayName": "leostar-snippets",
+  "version": "0.0.1",
   "private": true,
-  "packageManager": "pnpm@8.15.4",
-  "description": "leostar's vscode extension",
+  "packageManager": "pnpm@9.3.0",
+  "description": "leostar's vscode snippets",
   "author": "LeoStar <hi@leostar.top>",
   "license": "MIT",
-  "homepage": "https://github.com/ileostar/leostar-tools#readme",
+  "homepage": "https://github.com/ileostar/vscode-leostar-snippets#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ileostar/leostar-tools"
+    "url": "https://github.com/ileostar/vscode-leostar-snippets"
   },
   "bugs": {
-    "url": "https://github.com/ileostar/leostar-tools/issues"
+    "url": "https://github.com/ileostar/vscode-leostar-snippets/issues"
   },
+  "keywords": [
+    "Vue 3",
+    "Snippets"
+  ],
   "categories": [
-    "Other"
+    "Snippets"
   ],
-  "main": "./dist/index.js",
   "icon": "res/icon.png",
-  "files": [
-    "dist"
-  ],
   "engines": {
-    "vscode": "^1.83.0"
+    "vscode": "^1.87.0"
   },
-  "activationEvents": [
-    "onStartupFinished"
-  ],
   "contributes": {
-    "commands": [
+    "snippets": [
       {
-        "command": "leostar-tools.leostar",
-        "title": "Leostar: 简短标题"
-      },
-      {
-        "command": "leostar-tools.leostar2",
-        "title": "Leostar: 插入代码片段"
+        "language": "vue",
+        "path": "./snippets/vue.json"
       }
     ]
   },
   "scripts": {
-    "build": "tsup src/index.ts --external vscode",
-    "dev": "nr build --watch",
-    "lint": "eslint .",
-    "vscode:prepublish": "nr build",
     "publish": "vsce publish --no-dependencies",
     "pack": "vsce package --no-dependencies",
-    "test": "vitest",
-    "typecheck": "tsc --noEmit",
     "release": "bumpp && nr publish"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^1.1.1",
-    "@antfu/ni": "^0.21.9",
-    "@types/node": "^20.9.0",
-    "@types/vscode": "^1.84.1",
-    "@vscode/vsce": "^2.22.0",
-    "bumpp": "^9.2.0",
-    "eslint": "^8.53.0",
-    "esno": "^4.0.0",
-    "pnpm": "^8.10.5",
-    "rimraf": "^5.0.5",
-    "tsup": "^7.2.0",
-    "typescript": "^5.2.2",
-    "vite": "^4.5.0",
-    "vitest": "^0.34.6"
+    "@antfu/eslint-config": "^2.8.3",
+    "@antfu/ni": "^0.21.12",
+    "@types/node": "^20.11.28",
+    "@types/vscode": "^1.87.0",
+    "@vscode/vsce": "^2.24.0",
+    "bumpp": "^9.4.0",
+    "esno": "^4.7.0",
+    "pnpm": "^8.15.5"
   }
 }

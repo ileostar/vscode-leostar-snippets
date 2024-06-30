@@ -1,0 +1,55 @@
+{
+  "Vue base code": {
+    "body": [
+      "<script setup lang=\"ts\">",
+      "",
+      "</script>",
+      "",
+      "<template>",
+      "  <div>",
+      "    ",
+      "  </div>",
+      "</template>"
+    ],
+    "description": "Vue base code",
+    "prefix": "vbase"
+  },
+  "Vue base code with less": {
+    "body": [
+      "<script setup lang=\"ts\">",
+      "",
+      "</script>",
+      "",
+      "<template>",
+      "  <div>",
+      "    ",
+      "  </div>",
+      "</template>",
+      "",
+      "<style lang=\"less\" scoped>",
+      "  ",
+      "</style>"
+    ],
+    "description": "Vue base code with less",
+    "prefix": "vbase-less"
+  },
+  "Vue base code with sass": {
+    "body": [
+      "<script setup lang=\"ts\">",
+      "",
+      "</script>",
+      "",
+      "<template>",
+      "  <div>",
+      "    ",
+      "  </div>",
+      "</template>",
+      "",
+      "<style lang=\"sass\" scoped>",
+      "  ",
+      "</style>"
+    ],
+    "description": "Vue base code with sass",
+    "prefix": "vbase-sass"
+  }
+}
