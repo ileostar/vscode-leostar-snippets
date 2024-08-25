@@ -1,8 +1,8 @@
 {
-  "publisher": "leostar-tools",
+  "publisher": "leostar-snippets",
   "name": "leostar-snippets",
   "displayName": "leostar-snippets",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
   "packageManager": "pnpm@9.3.0",
   "description": "leostar's vscode snippets",
@@ -17,7 +17,14 @@
     "url": "https://github.com/ileostar/vscode-leostar-snippets/issues"
   },
   "keywords": [
-    "Vue 3",
+    "vue 3",
+    "React",
+    "css",
+    "javascript",
+    "typescript",
+    "pinia",
+    "regex",
+    "vitest",
     "Snippets"
   ],
   "categories": [
@@ -31,7 +38,111 @@
     "snippets": [
       {
         "language": "vue",
-        "path": "./snippets/vue.json"
+        "path": "./snippets/vue/index.json"
+      },
+      {
+        "language": "vue",
+        "path": "./snippets/js/index.json"
+      },
+      {
+        "language": "html",
+        "path": "./snippets/vue/index.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/js/index.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/js/index.json"
+      },
+      {
+        "language": "css",
+        "path": "./snippets/css/index.json"
+      },
+      {
+        "language": "scss",
+        "path": "./snippets/css/index.json"
+      },
+      {
+        "language": "less",
+        "path": "./snippets/vue/index.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/pinia/index.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/pinia/index.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/nest/index.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/nest/index.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/react/javascript.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/react/typescript.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/react/javascript.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/react/typescript.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/regex/index.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/regex/index.json"
+      },
+      {
+        "language": "vue",
+        "path": "./snippets/regex/index.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/regex/index.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/regex/index.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/vitest/index.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/vitest/index.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/jest/index.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/jest/index.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/jest/index.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/jest/index.json"
       }
     ]
   },
