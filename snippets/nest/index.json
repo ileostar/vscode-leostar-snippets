@@ -1,0 +1,182 @@
+{
+  "Nest Service": {
+    "prefix": "nest-service",
+    "description": "NestJS Service(Provides)",
+    "body": [
+      "import { Injectable } from '@nestjs/common';",
+      "",
+      "@Injectable()",
+      "export class ${1}Service {",
+      "\tconstructor() {}",
+      "\t${0}",
+      "}"
+    ]
+  },
+  "Nest Controller": {
+    "prefix": "nest-controller",
+    "description": "NestJS Controller",
+    "body": [
+      "import { Controller, Get } from '@nestjs/common';",
+      "",
+      "@Controller('${1}')",
+      "export class ${2}Controller {",
+      "\tconstructor(){}",
+      "",
+      "\t@Get() {",
+      "\t\t${0}",
+      "\t}",
+      "}"
+    ]
+  },
+  "Nest Module": {
+    "prefix": "nest-v4-module",
+    "description": "NestJS Module",
+    "body": [
+      "import { Module } from '@nestjs/common';",
+      "import { ${1}Controller } from './${2}.controller';",
+      "import { ${1}Service } from './${2}.service';",
+      "",
+      "@Module({",
+      "\tcontrollers: [${1}Controller],",
+      "\tproviders:[${1}Service],",
+      "})",
+      "export class ${1}Module {${0}};"
+    ]
+  },
+  "Nest Global Module": {
+    "prefix": "nest-module-global",
+    "description": "NestJS Global Module",
+    "body": [
+      "import { Module, Global } from '@nestjs/common';",
+      "import { ${1}Controller } from './${2}.controller';",
+      "",
+      "@Global()",
+      "@Module({",
+      "\tcontrollers: [${1}Controller],",
+      "\tproviders: [],",
+      "})",
+      "export class ${1}Module {${0}};"
+    ]
+  },
+  "Nest Guard": {
+    "prefix": "nest-guard",
+    "description": "NestJS Guard",
+    "body": [
+      "import { Injectable, CanActivate, ExecutionContext } from '@nestjs/common';",
+      "import { Observable } from 'rxjs';",
+      "import { Reflector } from '@nestjs/core';",
+      "",
+      "@Injectable()",
+      "export class ${1}Guard implements CanActivate {",
+      "\tconstructor(private readonly reflector: Reflector) {}",
+      "",
+      "\tcanActivate(context: ExecutionContext):  boolean | Promise<boolean> | Observable<boolean> {",
+      "\t\t${0}",
+      "\t}",
+      "}"
+    ]
+  },
+  "Nest Middleware": {
+    "prefix": "nest-middleware",
+    "description": "NestJS Middleware",
+    "body": [
+      "import { Injectable, NestMiddleware, MiddlewareFunction } from '@nestjs/common';",
+      "",
+      "@Injectable()",
+      "export class ${1}Middleware implements NestMiddleware {",
+      "\tresolve(...args: any[]): MiddlewareFunction {",
+      "\t\treturn (req, res, next) => {",
+      "\t\t\t${0}",
+      "\t\t\tnext();",
+      "\t\t};",
+      "\t}",
+      "}"
+    ]
+  },
+  "Nest Interceptor": {
+    "prefix": "nest-interceptor",
+    "description": "NestJS Interceptor",
+    "body": [
+      "import { Injectable, NestInterceptor, ExecutionContext, CallHandler } from '@nestjs/common';",
+      "import { Observable } from 'rxjs';",
+      "",
+      "@Injectable()",
+      "export class ${1}Interceptor implements NestInterceptor {",
+      "\tintercept(context: ExecutionContext, next: CallHandler): Observable<any> {",
+      "\t\t${0}",
+      "\t}",
+      "}"
+    ]
+  },
+  "Nest Pipe": {
+    "prefix": "nest-pipe",
+    "description": "NestJS Pipe",
+    "body": [
+      "import { PipeTransform, Injectable, ArgumentMetadata } from '@nestjs/common';",
+      "",
+      "@Injectable()",
+      "export class ${1:Validation}Pipe implements PipeTransform {",
+      "  transform(value: any, metadata: ArgumentMetadata) {",
+      "    return ${0:value};",
+      "  }",
+      "}"
+    ]
+  },
+  "Nest Unit Test": {
+    "prefix": "nest-test",
+    "description": "NestJS Unit Test",
+    "body": [
+      "import { Test } from '@nestjs/testing';",
+      "import { ${1}Controller } from './${2}.controller';",
+      "import { ${1}Service } from './${2}.service';",
+      "",
+      "describe('${1}Controller', () => {",
+      "\tlet ${2}Controller: ${1}Controller;",
+      "\tlet ${2}Service: ${1}Service;",
+      "",
+      "\tbeforeEach(async () => {",
+      "\t\tconst module = await Test.createTestingModule({",
+      "\t\t\tcontrollers: [${1}Controller],",
+      "\t\t\tproviders: [${1}Service],",
+      "\t\t}).compile();",
+      "",
+      "\t\t${2}Service = module.get<${1}Service>(${1}Service);",
+      "\t\t${2}Controller = module.get<${1}Controller>(${1}Controller);",
+      "\t});",
+      "",
+      "\tdescribe('findAll', () => {",
+      "\t\tit('should return an array of users', async () => {",
+      "\t\t\tconst result = ['test'];",
+      "\t\t\tjest.spyOn(${2}Service, 'findAll').mockImplementation(() => result);",
+      "\t\t\t${0}",
+      "\t\t\texpect(await ${2}Controller.findAll()).toBe(result);",
+      "\t\t});",
+      "\t});",
+      "});"
+    ]
+  },
+  "Nest Service Unit Test": {
+    "prefix": "nest-test-service",
+    "description": "NestJS Service Unit Test",
+    "body": [
+      "import { Test } from '@nestjs/testing';",
+      "import { ${1}Service } from './${2}.service';",
+      "",
+      "describe('${1} Test suite', () => {",
+      "\tlet ${2}Service: ${1}Service;",
+      "",
+      "\tbeforeEach(async () => {",
+      "\t\tconst module = await Test.createTestingModule({",
+      "\t\t\tproviders: [${1}Service],",
+      "\t\t}).compile();",
+      "",
+      "\t\t${2}Service = module.get<${1}Service>(${1}Service);",
+      "\t});",
+      "",
+      "\tit('should be defined', () => {",
+        "\t\texpect(${2}Service).toBeDefined();",
+      "\t});",
+      "});"
+    ]
+  }
+}

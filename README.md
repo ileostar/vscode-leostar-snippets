@@ -1,15 +1,26 @@
-# leostar-tools
+# vscode-leostar-snippets
 
-leostar's vscode plugin
+![Snippets](./res/demo.gif)
 
-## 功能需求
+<p align="center">leostar's vscode snippets🎞</p>
 
-- 常用的代码片段
+## Install
 
-```txt
-vbase
+[👉leostar-snippets](https://marketplace.visualstudio.com/items?itemName=leostar-tools.leostar-snippets)
 
-vbase-less
+## Snippets
 
-vbase-sass
-```
+- [x] vue3
+- [x] react
+- [x] javascript
+- [x] typescript
+- [x] css reset
+- [x] nestjs
+- [x] pinia
+- [x] vitest
+- [x] jest
+- [x] regex
+
+## LICENSE
+
+MIT

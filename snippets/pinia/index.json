@@ -1,0 +1,18 @@
+{
+  "Pinia Store Base": {
+    "prefix": "pinia-base",
+    "body": [
+      "import { defineStore, acceptHMRUpdate } from \"pinia\"",
+      "",
+      "export const use${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}Store = defineStore(\"$TM_FILENAME_BASE\", () => {",
+      "\t${0}",
+      "})",
+      "",
+      "if (import.meta.hot) {",
+      "\timport.meta.hot.accept(acceptHMRUpdate(use${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}Store, import.meta.hot))",
+      "}",
+      ""
+    ],
+    "description": "Base code needed for a Pinia store file with Composition API"
+  }
+}
