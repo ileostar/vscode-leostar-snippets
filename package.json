@@ -2,7 +2,7 @@
   "name": "vscode-leostar-snippets",
   "displayName": "leostar-snippets",
   "publisher": "leostar",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "private": true,
   "packageManager": "pnpm@9.3.0",
   "description": "leostar's vscode snippets",
